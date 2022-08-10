@@ -1,0 +1,52 @@
+{
+    "id": "actionform",
+    "schemaVersion": "1.1.0",
+    "name": "actionForm",
+    "revision": "v1",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "sender",
+            "type": "string",
+            "label": "SENDER",
+            "readOnly": false,
+            "value": "${context.SENDER}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "totalamount",
+            "type": "integer",
+            "label": "TOTALAMT",
+            "readOnly": false,
+            "value": "${context.TOTALAMT}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "balance",
+            "type": "integer",
+            "label": "BALANCE",
+            "readOnly": false,
+            "value": "${context.BALANCE}",
+            "constraints": {
+                "required": false
+            }
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "reject",
+            "text": "Reject",
+            "decisionType": "negative"
+        }
+    ]
+}

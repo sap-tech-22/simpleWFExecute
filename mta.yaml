@@ -1,0 +1,17 @@
+_schema-version: "3.2"
+ID: wfTR_execute
+version: 0.0.1
+modules:
+- name: workflow-module
+  type: com.sap.application.content
+  path: workflow-module
+  requires:
+  - name: workflow-execute
+    parameters:
+      content-target: true
+resources:
+- name: workflow-execute
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: workflow
+    service-plan: lite
